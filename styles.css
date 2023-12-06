@@ -1,0 +1,91 @@
+body {
+    color:#fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
+nav ul li a {
+    text-decoration: none;
+    
+}
+nav ul li{
+    list-style: none;
+}
+
+header {
+    background-color: #222831;
+    grid-area: header;
+    padding-left: 5%;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #393e46;
+}
+
+.main_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:10% repeat(5, 1fr);
+    grid-template-areas: 
+    "nav header header"
+    "intro intro intro"
+    "gallery gallery gallery"
+    "gallery gallery gallery"
+    "about about about"
+    "contact contact footer"
+    ;
+    grid-gap: 0.5em;
+    margin: 1%;
+}
+
+.introduction{
+grid-area: intro;
+background-color: #f96d00;
+}
+.introduction img {
+    max-width: 35%;
+    max-height: 35%;
+    margin: 3%;
+    border-radius: 5%;
+    border: #fff dotted .2em;
+    align-content: center;
+    float: left;
+    
+}
+.introduction p {
+    padding: 1%;
+}
+
+.gallery{
+grid-area: gallery;
+background-color: #f2f2f2;
+
+}
+.gallery
+
+.about_me{
+grid-area: about;
+background-color: #111;
+color: #393e46;
+}
+
+.contact_me{
+    grid-area: contact;
+    background-color: #393e46;
+}
+.btn {
+    
+}
+
+footer{
+    grid-area: footer;
+    background-color: #f96d00;
+}
+
+footer a img {
+    max-width: 20%;
+    max-height: 20%;
+    margin: 1em;
+}
