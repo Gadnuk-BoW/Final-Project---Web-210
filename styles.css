@@ -4,13 +4,21 @@ body {
     padding: 0;
     font-family: 'Raleway', sans-serif;
     line-height: 1.5;
+    max-width: 2000px;
+    min-width: 375px;
 }
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
 nav ul li a {
     text-decoration: none;
     
 }
 nav ul li{
     list-style: none;
+    padding: 1%;
 }
 
 header {
@@ -22,8 +30,21 @@ header {
 nav{
     grid-area: nav;
     background-color: #393e46;
+    font-size: 1.4em;
+    padding-right: 1%;
+    
 }
 
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+nav a li:hover{
+    color: #f96d00;
+    border: #f96d00 solid;
+    
+}
 .main_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -40,48 +61,155 @@ nav{
     margin: 1%;
 }
 
+@media screen and (max-width: 480px) {
+    .main_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:3% 6% repeat(7, 1fr);
+        grid-template-areas: 
+        "header"
+        "nav"
+        "intro"
+        "gallery"
+        "gallery"
+        "gallery"
+        "about"
+        "contact"
+        "footer"
+        ;
+        grid-gap: 0.5em;
+        margin: 4%;
+    }
+    nav ul li{
+        margin: 3%;
+        border:#f2f2f2 solid 2px;
+        padding-left:35% ;
+    }
+    
+  }
+
+
+
+
 .introduction{
 grid-area: intro;
 background-color: #f96d00;
+font-size: 1.3em;
+padding: 3%;
 }
 .introduction img {
     max-width: 35%;
     max-height: 35%;
-    margin: 3%;
-    border-radius: 5%;
+    margin: 4%;
+    border-radius: 10%;
     border: #fff dotted .2em;
     align-content: center;
-    float: left;
+    float: right;
     
 }
+
 .introduction p {
     padding: 1%;
+    
 }
+
+img {
+    max-width: 100%
+  }
 
 .gallery{
 grid-area: gallery;
 background-color: #f2f2f2;
+display: flex ; /* set this class to be flex */
+flex-flow: row wrap; /* Set direction and wrap elements. Combination of flex-direction (row, row-reverse or column, column reverse) and flex-wrap (wrap, no-wrap, wrap-reverse) */
+align-items: stretch; /* Stretch to size of flexible container.  Choices include: flex-start, flex-end, center, baseline, stretch (default) */
 
 }
-.gallery
+
+.image {
+    border-radius: 0.5em;
+    background-color: #333;
+    flex: 1 2 18em; /* grow to a scale of 1, 18em length */
+    padding: 0.5em;
+    display: flex;
+    flex-flow: column wrap; /* images and photo credit show up in a column */
+    justify-content: flex-end; /* lines are packed to bottom of container */
+    transform: scale(0.6); /* Scale down image to 60% of size */
+    margin-left: -2em;
+    margin-right: -2em;
+    transition: 0.5s;
+    max-height: 50%;
+  }
+.image img {
+    border-radius: 0.5em;
+    border: 2px solid #fff;
+
+}
+
+.image figcaption {
+    color: white;
+    font-weight: 600;
+    margin-top: 0.5em;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 3px;
+}
+
+.image .mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.6;
+    border-radius: 0.5em;
+    transition: 0.5s;
+}
+
+.image:hover {
+    transform: scale(0.95);
+  }
+
+.image:hover .mask {
+    height: 0%;
+}
 
 .about_me{
-grid-area: about;
-background-color: #111;
-color: #393e46;
+    grid-area: about;
+    background-color: #393e46;
+    color: #f2f2f2;
+    padding: 4%;
+    font-size: 1.3em;
 }
 
 .contact_me{
     grid-area: contact;
-    background-color: #393e46;
+    background-color: #f2f2f2;
+    color: #393e46;
+    padding: 3%;
 }
 .btn {
+    margin: 3% 40%;
+    font-weight: bold;
     
 }
 
 footer{
     grid-area: footer;
     background-color: #f96d00;
+}
+
+footer p {
+    margin: 3%;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #393e46;
 }
 
 footer a img {

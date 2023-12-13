@@ -12,20 +12,20 @@
 </head>
 <body class="main_grid">
     <header>
-        <h1>Hunter Clark | Portfolio</h1>
+        <h1 id="home">Hunter Clark | Portfolio</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a>Home</a></li>
-            <li><a>Intro</a></li>
-            <li><a>Gallery</a></li>
-            <li><a>About Me</a></li>
-            <li><a>Contact Me</a></li>
+            <a href="home"><li>Home</li></a>
+            <a href="intro"><li>Intro</li></a>
+            <a href="gallery"><li>Gallery</li></a>
+            <a href="about"><li>About Me</li></a>
+            <a href="#contact"><li>Contact Me</li></a>
         </ul>
     </nav>
 
-    <section class="introduction">
+    <section id="intro" class="introduction">
         <img src="img/portfolio_profile.jpg">
         <p>Welcome to my portfolio site.
 
@@ -37,19 +37,32 @@
 
     </section>
 
-    <section class="gallery">
-        <section class="gallery_item"></section>
-        <section class="gallery_item"></section>
-        <section class="gallery_item"></section>
-        <section class="gallery_item"></section>
-        <section class="gallery_item"></section>
-        <section class="gallery_item"></section>
+    <section id="gallery" class="gallery">
+
+        <figure class="image">
+            <div class="mask"></div>
+            <img src="img/first_portfolio_site.png" alt="My first portfolio website">
+            <figcaption>My First Portfolio Website</figcaption>
+        </figure>
+
+        <figure class="image">
+            <div class="mask"></div>
+            <img src="img/web140_final_project.png" alt="WEB-140 Final Project">
+            <figcaption>Vicious Cycles Final Project</figcaption>
+        </figure>
+
+        <figure class="image">
+            <div class="mask"></div>
+            <img src="img/crypto_converter.png" alt="A C# ">
+            <figcaption></figcaption>
+        </figure>
+
 
     </section>
 
-    <section class="about_me">
+    <section id="about" class="about_me">
         <h2>About Me</h2>
-        <p>Hey, looks like you found my page. My name is Hunter and I am an aspiring web developer/ graphic designer that has two years of experience in the field. I like to read and learn in my free time. While I am still finishing my degree, I am making various prototypes and doing school projects that are oriented towards web development. I enjoy this field of work, and I am hoping to become a part of a good team to help develop some awesome websites and designs.</p>
+        <p>Hey, looks like you found my page. My name is Hunter and I am an aspiring web developer / graphic designer that has two years of experience in the field. I like to read and learn in my free time. While I am still finishing my degree, I am making various prototypes and doing school projects that are oriented towards web development. I enjoy this field of work, and I am hoping to become a part of a good team to help develop some awesome websites and designs.</p>
         
     </section>
 
@@ -70,7 +83,7 @@
 
             <fieldset>
                 <legend>Inquiries</legend>
-                <textarea id="comments" name="comments" rows="6" cols="50" placeholder="How can we help you?"></textarea>
+                <textarea id="comments" name="comments" rows="6" cols="30" placeholder="How can we help you?"></textarea>
         
             </fieldset>
             <button form="contact" type="submit" value="Submit" class="btn">Submit</button>
@@ -83,6 +96,10 @@
     <footer>
         <a href="https://www.instagram.com/"><img src="img/Instagram_icon.png"></a>
         <a href="https://twitter.com/home"><img src="img/twitter.png"></a>
+
+        <p>Contact Information:</p>
+        <p><a href="mailto:hmclark1@my.waketech.edu">hmclark1@my.waketech.edu</p>
+        <p><a href="tel:+19999999999">Phone Number: (999)-999-9999</p>
     </footer>
 
     
